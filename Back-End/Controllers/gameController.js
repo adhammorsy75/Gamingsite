@@ -25,6 +25,7 @@ const CreateGame = async () => {
         console.log('Game Created');
     }
 }
-CreateGame();
+//reason i commented this part out is if itis not commented out it will keep pushing new games to the db
+// CreateGame();
 
 module.exports = gameController;
