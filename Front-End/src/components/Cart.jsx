@@ -40,6 +40,33 @@ const Cart = ({ setIsAuthenticated }) => {
         }
     };
 
-  
+    return (
+        <div className='Cart'>
+            <NavBar setIsAuthenticated={setIsAuthenticated} />
+            <div className='cart-container'>
+                <h1>Your Cart</h1>
+                {cart ? (
+                    <div className='cart-items'>
+                        {cart.games?.map((item, index) => (
+                            <div key={index} className='cart-item'>
+                                <div className='item-details'>
+                                    <div className='game-name'>{item.game.name}</div>
+                                    <div className='quantity'>Quantity: {item.quantity}</div>
+                                </div>
+                            </div>
+                        ))}
+                        <div className='clear-cart-container'>
+                            <div className='clear-cart' onClick={handleClearCart}>
+                                <IoTrashBinOutline className='bin-icon' size='25px' />Clear Cart
+                            </div>
+                        </div>
+                    </div>
+                ) : (
+                    <div className='empty-cart'>Your cart is empty</div>
+                )}
+            </div>
+        </div>
+    );
+}
 
 export default Cart;
