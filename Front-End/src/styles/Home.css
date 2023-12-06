@@ -1,0 +1,26 @@
+.Cart {
+    background-color: rgb(249, 249, 249);
+    height: 100vh;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cart-container .cart-items {
+    display: grid;
+    gap: 20px;
+}
+
+.cart-container .cart-item {
+    border: 1px solid #ddd;
+    background-color: rgb(34, 97, 193);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
