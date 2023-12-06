@@ -1,0 +1,18 @@
+.Game {
+    background-color: rgb(249, 249, 249);
+    min-height: 100vh;
+}
+
+.Game .title {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.games-container {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    margin-left: 6vw;
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
