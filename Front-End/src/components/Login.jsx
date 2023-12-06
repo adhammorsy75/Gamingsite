@@ -34,7 +34,10 @@ const Login = ({ setIsAuthenticated }) => {
                     rememberMe: rememberMe,
                 }
             );
-            
+            if (res.status === 200) {
+                // Extract the token from the response
+                const { token, user } = res.data;
+
                 if (token) {
                     // Store the token in a secure cookie using document.cookie
                     document.cookie = `jwt=${token}; max-age=${86400}; path=/; samesite=strict`;
@@ -54,7 +57,10 @@ const Login = ({ setIsAuthenticated }) => {
                 }
             }
         } catch (error) {
-        
+            console.log(error);
+            if (error.response.status === 401) {
+                window.alert('Invalid Credentials');
+            }
             else if (error.response.status === 401) {
                 window.alert('User Not Found');
             }
@@ -112,7 +118,7 @@ const Login = ({ setIsAuthenticated }) => {
                                     onChange={handleChange}
                                 />
                             </div>
-                           
+                            <div className="mb-3 form-check">
                                 <input
                                     type="checkbox"
                                     className="form-check-input"
