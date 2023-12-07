@@ -16,7 +16,12 @@ const Cart = ({ setIsAuthenticated }) => {
             if (res.status === 200) {
                 setCart(res.data);
             }
-  
+        } catch (error) {
+            if (error.response.status !== 404) {
+                window.alert('Internal Server Error');
+            }
+            else {
+                setCart('');
             }
         }
     };
