@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import '../styles/Navbar.css';
+import '../styles/NavBar.css';
 
 const NavBar = ({ setIsAuthenticated }) => {
     const navigate = useNavigate();
