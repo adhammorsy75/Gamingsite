@@ -13,11 +13,7 @@ const GameCard = ({ game, handleClick }) => {
             </div>
             <div className='details'>
                 {game.details}
-            </div>
-            <div className="btn-container">
-                <button onClick={handleOpenModal} className="btn btn1">
-                    Add to Cart
-                </button>
+  
             </div>
         </div>
     );
