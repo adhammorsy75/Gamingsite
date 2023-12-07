@@ -36,7 +36,7 @@ const Register = () => {
                 if (res.status === 200) {
                     // Registration successful
                     window.alert("Registered Successfully");
-                    navigate('/login');
+                    navigate('/login');// redrict to the log in page
                 }
             } catch (error) {
                 console.log(error);
@@ -110,12 +110,12 @@ const Register = () => {
 
     const isValidEmail = (email) => {
         //Add email validation code here
-        const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+        const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i; //checking if itis a real email or just random numbers and letters
         return emailRegex.test(email);
     };
 
     const isValidPhoneNumber = (input) => {
-        const phoneNumberPattern = /^\d{10}$/;
+        const phoneNumberPattern = /^\d{10}$/; // checking number lenth 
         return phoneNumberPattern.test(input);
     };
 

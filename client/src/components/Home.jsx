@@ -11,11 +11,11 @@ import NavBar from './NavBar';
 
 // Set the app element for react-modal
 Modal.setAppElement(document.body);
-
+//react hooks 
 const Home = ({ setIsAuthenticated }) => {
     const [games, setGames] = useState('');
     const [IsOpenPopup, setIsOpenPopup] = useState(false);
-    const user = JSON.parse(Cookies.get('userData'));
+    const user = JSON.parse(Cookies.get('userData')); // store data in browser 
     const [formData, setFormData] = useState({
         gameID: "",
         name: "",

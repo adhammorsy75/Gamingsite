@@ -14,6 +14,8 @@ const NavBar = ({ setIsAuthenticated }) => {
     return (
         <div className='nav'>
             <div className='flex-div'>
+                <h1>S</h1><h2>ANP</h2><h1>G</h1><h2>AMING</h2>
+
                 <Link className='home-link link' to='/'>Home</Link>
                 <Link className='home-link link' to='/cart'>Cart</Link>
             </div>
