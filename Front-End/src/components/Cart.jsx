@@ -54,18 +54,7 @@ const Cart = ({ setIsAuthenticated }) => {
                                     <div className='quantity'>Quantity: {item.quantity}</div>
                                 </div>
                             </div>
-                        ))}
-                        <div className='clear-cart-container'>
-                            <div className='clear-cart' onClick={handleClearCart}>
-                                <IoTrashBinOutline className='bin-icon' size='25px' />Clear Cart
-                            </div>
-                        </div>
-                    </div>
-                ) : (
-                    <div className='empty-cart'>Your cart is empty</div>
-                )}
-            </div>
-        </div>
+
     );
 }
 
