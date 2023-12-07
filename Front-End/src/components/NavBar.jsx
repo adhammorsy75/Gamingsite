@@ -15,7 +15,6 @@ const NavBar = ({ setIsAuthenticated }) => {
         <div className='nav'>
             <div className='flex-div'>
                 <Link className='home-link link' to='/'>Home</Link>
-                <Link className='home-link link' to='/cart'>Cart</Link>
             </div>
             <div>
                 <button className='link btn' onClick={handleLogout}>Logout</button>
