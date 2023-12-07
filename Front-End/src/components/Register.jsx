@@ -209,7 +209,62 @@ const Register = () => {
                                     Age
                                 </label>
                                 <input
-
+                                    type="number"
+                                    className="form-control"
+                                    id="age"
+                                    name="age"
+                                    value={user.age}
+                                    onChange={handleInput}
+                                />
+                                {errors.age && <div className="text-danger">{errors.age}</div>}
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="gender" className="form-label">
+                                    Gender
+                                </label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="gender"
+                                    name="gender"
+                                    value={user.gender}
+                                    onChange={handleInput}
+                                />
+                                {errors.gender && <div className="text-danger">{errors.gender}</div>}
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="exampleInputPassword1" className="form-label">
+                                    Password
+                                </label>
+                                <div className="password-input">
+                                    <input
+                                        type="password"
+                                        className="form-control"
+                                        id="exampleInputPassword1"
+                                        name="password"
+                                        value={user.password}
+                                        onChange={handleInput}
+                                    />
+                                    <div>
+                                        Length {renderValidationStatus(passwordValidation.length)} <br />
+                                        Special Character {renderValidationStatus(passwordValidation.specialChar)} <br />
+                                        Uppercase {renderValidationStatus(passwordValidation.uppercase)} <br />
+                                        Lowercase {renderValidationStatus(passwordValidation.lowercase)} <br />
+                                        Digit {renderValidationStatus(passwordValidation.digit)}
+                                    </div>
+                                </div>
+                                {errors.password && (
+                                    <div className="text-danger">{errors.password}</div>
+                                )}
+                            </div>
+                            <div className="mb-3 form-check">
+                                <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                <label className="form-check-label" htmlFor="exampleCheck1">I Agree terms and Conditions</label>
+                            </div>
+                            <button type="submit" className="btn btn-outline-primary w-100 mt-4 rounded-pill">
+                                Register
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
