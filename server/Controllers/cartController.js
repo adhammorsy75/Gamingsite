@@ -23,9 +23,9 @@ cartController.createCart = async (req, res) => {
     try {
         const { gameID, userID, quantity } = req.body;
 
-        // Check , if the user has an existing cart
+        // Check if the user has an existing cart
         let userCart = await Cart.findOne({ user: userID });
- 
+
         // If the user doesn't have a cart, create a new one with the data from the request
         if (!userCart) {
             userCart = new Cart({
