@@ -194,48 +194,22 @@ const Register = () => {
                                 </label>
                                 <input
                                     type="number" // Change to type="text" or use a pattern validation for 10-digit numbers
-                                    className="form-contro
-                                    name="age"
-                                    value={user.age}
-                                    onChange={handleInput}
-                                />
-                                {errors.age && <div className="text-danger">{errors.age}</div>}
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="gender" className="form-label">
-                                    Gender
-                                </label>
-                                <input
-                                    type="text"
                                     className="form-control"
-                                    id="gender"
-                                    name="gender"
-                                    value={user.gender}
+                                    id="contact"
+                                    name="contact"
                                     onChange={handleInput}
+                                    value={user.contact}
                                 />
-                                {errors.gender && <div className="text-danger">{errors.gender}</div>}
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="exampleInputPassword1" className="form-label">
-                                    Password
-                        
-                                        Uppercase {renderValidationStatus(passwordValidation.uppercase)} <br />
-                                        Lowercase {renderValidationStatus(passwordValidation.lowercase)} <br />
-                                        Digit {renderValidationStatus(passwordValidation.digit)}
-                                    </div>
-                                </div>
-                                {errors.password && (
-                                    <div className="text-danger">{errors.password}</div>
+                                {errors.contact && (
+                                    <div className="text-danger">{errors.contact}</div>
                                 )}
                             </div>
-                            <div className="mb-3 form-check">
-                                <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                <label className="form-check-label" htmlFor="exampleCheck1">I Agree terms and Conditions</label>
-                            </div>
-                            <button type="submit" className="btn btn-outline-primary w-100 mt-4 rounded-pill">
-                                Register
-                            </button>
-                        </form>
+                            <div className="mb-3">
+                                <label htmlFor="age" className="form-label">
+                                    Age
+                                </label>
+                                <input
+
                     </div>
                 </div>
             </div>
