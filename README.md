@@ -1,4 +1,4 @@
-# Pizza-HAUS
+# SNAP-GAMING
 <h1>Description</h1>
 <p>SnapGaming is a store full of games like steam and epic games:</P>
 <ul>
