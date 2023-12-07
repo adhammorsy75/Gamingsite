@@ -16,12 +16,7 @@ const Cart = ({ setIsAuthenticated }) => {
             if (res.status === 200) {
                 setCart(res.data);
             }
-        } catch (error) {
-            if (error.response.status !== 404) {
-                window.alert('Internal Server Error');
-            }
-            else {
-                setCart('');
+  
             }
         }
     };
@@ -54,7 +49,11 @@ const Cart = ({ setIsAuthenticated }) => {
                                     <div className='quantity'>Quantity: {item.quantity}</div>
                                 </div>
                             </div>
-                     
+                        ))}
+                        <div className='clear-cart-container'>
+                            <div className='clear-cart' onClick={handleClearCart}>
+                                <IoTrashBinOutline className='bin-icon' size='25px' />Clear Cart
+                            </div>
                         </div>
                     </div>
                 ) : (
