@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 30px;
+    background-color: black; /* Set the background color of the navbar to black */
+    color: white; /* Set the text color to white */
 }
 
 .nav .flex-div {
@@ -17,7 +19,7 @@
 .nav .home-link {
     text-decoration: none;
     padding-left: 20px;
-    color: black;
+    color: white; /* Set the text color to white */
 }
 
 .nav .home-link:hover {
