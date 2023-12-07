@@ -6,16 +6,7 @@ const GameCard = ({ game, handleClick }) => {
         handleClick(game);
     };
     return (
-        <div className='game-card'>
-            <img className='image' src={game.image} alt="Game's pic" />
-            <div className="name">
-                {game.name}
-            </div>
-            <div className='details'>
-                {game.details}
-  
-            </div>
-        </div>
+
     );
 }
 
